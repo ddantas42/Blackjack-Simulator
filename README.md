@@ -1,6 +1,6 @@
 # Blackjack-Simulator
 This is a project that aims to recreate the BlackJack game <br />
-For starts, I plan to implement the full game <br />
+To start, I plan to implement the full game <br />
 
 ## Future plans
 Bankroll to be able to play multiple times and keep track how much was gain/loss <br />
