@@ -62,9 +62,12 @@ int Hand::getValue() const
 // Operator
 std::ostream& operator<<( std::ostream& os, const Hand& hand)
 {
+	std::cout << hand.getName() << ": ";
 	for (int i = 0; i < hand.getCountCard(); i++)
-		os << hand.getCard(i).getName() << " | ";
-	std::cout << "Value = " << hand.getValue() << std::endl;
+	{
+		os << hand.getCard(i).getName() << " ";
+	}
+	std::cout << std::endl << "Value = " << hand.getValue() << std::endl;
 	return os;
 }
 

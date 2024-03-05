@@ -10,7 +10,6 @@ static void initial_handout(Hand *Player, Hand *Dealer)
 	Dealer->addCard(random_id());
 
 	print_table(*Player, *Dealer);
-	Dealer->addCard(random_id());
 }
 
 static int insta_win(Hand *Player, Hand *Dealer)
@@ -22,6 +21,7 @@ static int insta_win(Hand *Player, Hand *Dealer)
 	}
 	else if (Player->getValue() == 21)
 	{
+		print_table(*Player, *Dealer);
 		std::cout << "Blackjack! Player wins!" << std::endl;
 		return WIN;
 	}

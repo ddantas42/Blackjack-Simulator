@@ -12,8 +12,8 @@ void print_table(Hand Player, Hand Dealer)
 
 int main()
 {
-	Hand Player;
-	Hand Dealer;
+	Hand Player("Player");
+	Hand Dealer("Dealer");
 
 
 	srand(time(0));

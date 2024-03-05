@@ -10,7 +10,7 @@ class Hand
 	public:
 		// Constructors
 		Hand() : count_card(0) {};
-		Hand( std::string &name ) : count_card(0), name(name) {};
+		Hand( std::string const &name ) : count_card(0), name(name) {};
 
 		// Destructor
 		~Hand();
@@ -21,6 +21,7 @@ class Hand
 		void addCard( int id );
 		void removeCards( void );
 
+		std::string getName() const { return name; }
 		int getCountCard() const { return count_card; }
 		Card getCard( int index ) const { return card[index]; }
 		int getValue() const ;
