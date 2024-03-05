@@ -1,20 +1,8 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: hiper <hiper@student.42.fr>                +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/08/30 02:21:46 by ddantas-          #+#    #+#              #
-#    Updated: 2024/03/05 10:14:02 by hiper            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
 CC = c++
 CFLAGS = -Wno-unused-variable
 NAME = blackjack
 RM = rm
-FILESC = blackjack.cpp Card.cpp Hand.cpp
+FILESC = main.cpp Card.cpp Hand.cpp game.cpp
 
 OBJS = $(FILESC:.cpp=.o)
 

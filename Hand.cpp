@@ -18,19 +18,19 @@ void Hand::addCard(int id)
 {
 	switch (id)
 	{
-		case 0: this->card[count_card++] = Card("Ace", 0, 11); break;
-		case 1: this->card[count_card++] = Card("2", 1, 2); break;
-		case 2: this->card[count_card++] = Card("3", 2, 3); break;
-		case 3: this->card[count_card++] = Card("4", 3, 4); break;
-		case 4: this->card[count_card++] = Card("5", 4, 5); break;
-		case 5: this->card[count_card++] = Card("6", 5, 6); break;
-		case 6: this->card[count_card++] = Card("7", 6, 7); break;
-		case 7: this->card[count_card++] = Card("8", 7, 8); break;
-		case 8: this->card[count_card++] = Card("9", 8, 9); break;
-		case 9: this->card[count_card++] = Card("10", 9, 10); break;
-		case 10: this->card[count_card++] = Card("Valete", 10, 10); break;
-		case 11: this->card[count_card++] = Card("Rainha", 11, 10); break;
-		case 12: this->card[count_card++] = Card("Rei", 12, 10); break;
+		case ACE: this->card[count_card++] = Card("Ace", 0, 11); break;
+		case TWO: this->card[count_card++] = Card("2", 1, 2); break;
+		case THREE: this->card[count_card++] = Card("3", 2, 3); break;
+		case FOUR: this->card[count_card++] = Card("4", 3, 4); break;
+		case FIVE: this->card[count_card++] = Card("5", 4, 5); break;
+		case SIX: this->card[count_card++] = Card("6", 5, 6); break;
+		case SEVEN: this->card[count_card++] = Card("7", 6, 7); break;
+		case EIGHT: this->card[count_card++] = Card("8", 7, 8); break;
+		case NINE: this->card[count_card++] = Card("9", 8, 9); break;
+		case TEN: this->card[count_card++] = Card("10", 9, 10); break;
+		case JACK: this->card[count_card++] = Card("jack", 10, 10); break;
+		case QUEEN: this->card[count_card++] = Card("Queen", 11, 10); break;
+		case KING: this->card[count_card++] = Card("King", 12, 10); break;
 	}
 }
 

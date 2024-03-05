@@ -14,9 +14,9 @@
 # define EIGHT 7
 # define NINE 8
 # define TEN 9
-# define VALETE 10
-# define RAINHA 11
-# define REI 12
+# define JACK 10
+# define QUEEN 11
+# define KING 12
 
 class Card
 {
