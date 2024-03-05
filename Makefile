@@ -2,7 +2,7 @@ CC = c++
 CFLAGS = -Wno-unused-variable
 NAME = blackjack
 RM = rm
-FILESC = main.cpp Card.cpp Hand.cpp game.cpp
+FILESC = main.cpp  Hand.cpp Card.cpp game.cpp
 
 OBJS = $(FILESC:.cpp=.o)
 

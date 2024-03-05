@@ -1,5 +1,5 @@
 #include "Hand.hpp"
-
+#include "blackjack.hpp"
 
 // Destructor
 Hand::~Hand()

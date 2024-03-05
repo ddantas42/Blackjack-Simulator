@@ -4,20 +4,6 @@
 # include <iostream>
 # include <string>
 
-# define ACE 0
-# define TWO 1
-# define THREE 2
-# define FOUR 3
-# define FIVE 4
-# define SIX 5
-# define SEVEN 6
-# define EIGHT 7
-# define NINE 8
-# define TEN 9
-# define JACK 10
-# define QUEEN 11
-# define KING 12
-
 class Card
 {
 	public:

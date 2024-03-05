@@ -5,12 +5,13 @@
 # include <string>
 # include "Card.hpp"
 
-
 class Hand
 {
 	public:
 		// Constructors
 		Hand() : count_card(0) {};
+		Hand( std::string &name ) : count_card(0), name(name) {};
+
 		// Destructor
 		~Hand();
 		
@@ -25,12 +26,12 @@ class Hand
 		int getValue() const ;
 
 	private:
-
+		std::string name;
 		Card card[99];
 		int count_card;
 		int value;
 };
 
-#endif
-
 std::ostream& operator<<( std::ostream& os, const Hand& hand);
+
+#endif
