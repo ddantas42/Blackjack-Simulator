@@ -23,7 +23,7 @@ static int insta_win(Hand *Player, Hand *Dealer)
 	{
 		print_table(*Player, *Dealer);
 		std::cout << "Blackjack! Player wins!" << std::endl;
-		return WIN;
+		return WIN_BLACKJACK;
 	}
 	return 0;
 }
@@ -71,12 +71,12 @@ static int check_winner(Hand *Player, Hand *Dealer)
 	else if (Player->getValue() == Dealer->getValue())
 	{
 		std::cout << "It's a tie!" << std::endl;
-		return (LOSE);
+		return (TIE);
 	}
 	else
 	{
 		std::cout << "Dealer wins!" << std::endl;
-		return (TIE);
+		return (LOSE);
 	}
 }
 
@@ -84,8 +84,9 @@ int	game(Hand *Player, Hand *Dealer)
 {
 	// Initial handout
 	initial_handout(Player, Dealer);
-	if (insta_win(Player, Dealer))
-		return 0;
+	int insta_win_check = insta_win(Player, Dealer);
+	if (insta_win_check)
+		return insta_win_check;
 	
 	// Player drawing phase
 	player_draw(Player, Dealer);

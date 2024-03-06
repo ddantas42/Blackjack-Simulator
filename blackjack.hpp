@@ -26,6 +26,7 @@
 # define KING 12
 
 # define WIN 100
+# define WIN_BLACKJACK 150
 # define LOSE 200
 # define TIE 300
 

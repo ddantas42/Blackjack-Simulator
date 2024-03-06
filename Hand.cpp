@@ -59,6 +59,42 @@ int Hand::getValue() const
 	return value;
 }
 
+void Hand::getInitialBet()
+{
+	std::string input;
+	std::cout << "Player bank roll: " << this->bankroll << "€" << std::endl;
+	std::cout << "Bet: "; std::cin >> input;
+	if (std::stoi(input) > this->bankroll || std::stoi(input) < 0)
+	{
+		if (std::stoi(input) < 0)
+			std::cerr << "You can't bet negative money!" << std::endl;
+		else
+			std::cerr << "You don't have enough money!" << std::endl;
+		getInitialBet();
+	}
+	else if (std::stoi(input) < 0)
+	{
+		getInitialBet();
+	}
+	else
+		this->bet = std::stoi(input);
+
+}
+
+void Hand::setBankroll(int condition)
+{
+	if (condition == WIN)
+		this->bankroll += this->bet;
+	else if (condition == LOSE)
+		this->bankroll -= this->bet;
+	else if (condition == WIN_BLACKJACK)
+		this->bankroll += this->bet * 1.5;
+	else if (condition == TIE)
+		this->bankroll = this->bankroll;
+	else
+		std::cerr << "unregonized winning condition" << std::endl;
+}
+
 // Operator
 std::ostream& operator<<( std::ostream& os, const Hand& hand)
 {
